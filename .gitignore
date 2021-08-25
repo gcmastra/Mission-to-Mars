@@ -1,9 +1,10 @@
 # additing more files to ignore on date 20210812
 config.py
 # we do not need to upload the data files used in the exercises to the repo on Github
-
+Practice_Scraping_0834.ipynb
+Downloads/
 downloads/
-# Resources/
+Resources/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
