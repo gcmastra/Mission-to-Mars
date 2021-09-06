@@ -4,7 +4,7 @@
 ### Web Scraping Module 10 
 
 ### Deliverable One 
-Please refer to file <b>Mission_to_Mars_Challenge</b>
+Please refer to file <b>Mission_to_Mars_Challenge.ipynb</b>
 
 ### Deliverable Two
 Please see the following files 
@@ -13,4 +13,4 @@ Please see the following files
 -  templates/index.html
 
 ### Deliverable Three
-- did not attempt due to time constraints
+- Please refer to file <b>templates/index.html</b>
