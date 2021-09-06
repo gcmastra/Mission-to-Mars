@@ -9,6 +9,12 @@ import datetime as dt
 
 from webdriver_manager.chrome import ChromeDriverManager
 
+def button_click():
+
+    hello_messsage = "<H2>Buenos Dias El Mundo</H2>"
+
+    return hello_message
+
 def scrape_all():
     # Initiate headless driver for deployment
     executable_path = {'executable_path': ChromeDriverManager().install()}

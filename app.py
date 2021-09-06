@@ -19,10 +19,18 @@ def index():
 @app.route("/scrape")
 def scrape():
    # mars = mongo.db.mars
-   mars = mongo.db.mars
-   mars_data = scraping.scrape_all()
-   # mars.update({}, mars_data, upsert=True)
-   mars.replace_one({}, mars_data, upsert=True)
+   try:
+      mars = mongo.db.mars
+      mars_data = scraping.scrape_all()
+      mars.update({}, mars_data, upsert=True)
+      # mars.replace_one({}, mars_data, upsert=True)
+    
+   except AttributeError:
+        return None, None  
+        
+   else:
+      browser.quit()
+      return redirect('/', code=404)
 
    return redirect('/', code=302)
 

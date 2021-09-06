@@ -11,12 +11,13 @@
     />
   </head>
   <body>
-    <div class="container">
+    <div class="container" background-color="#e84242">
       <!-- Add Jumbotron to Header -->
-      <div class="jumbotron text-center">
+      <div class="jumbotron text-center" >
         <h1>Mission to Mars</h1>
         <!-- Add a button to activate scraping script -->
-        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button" disabled>Scrape New Data</a></p>
+        <p><a class="btn btn-primary btn-lg" onclick="button_click()" role="button" active>Click Here Instead</a></p>
       </div>
 
       <!-- Add section for Mars News -->
@@ -25,8 +26,10 @@
           <div class="media">
             <div class="media-body">
               <h2>Latest Mars News</h2>
-              <h4 class="media-heading">{{ mars.news_title }}</h4>
-              <p>{{ mars.news_paragraph }}</p>
+              <!-- <h4 class="media-heading">{{ mars.news_title }}</h4> -->
+              <h4 class="media-heading"></h4>"NASA's Mars 2020 Rover Completes Its First Drive"</h4>
+              <!-- <p>{{ mars.news_paragraph }}</p> -->
+              <p></p>'In a 10-plus-hour marathon, the rover steered, turned and drove in 3-foot (1-meter) increments over small ramps.'</p>
             </div>
           </div>
         </div>
@@ -38,8 +41,9 @@
           <h2>Featured Mars Image</h2>
 
           <!-- if images is False/None/non-existent, then default to error message -->
-          <img
-            src="{{mars.featured_image | default('static/images/error.png', true) }}"
+          <!-- src="{{mars.featured_image | default('static/images/error.png', true) }}" -->
+            <img
+            src="https://space-facts.com/wp-content/uploads/mars.jpg"
             class="img-responsive"
             alt="Responsive image"
           />
@@ -49,7 +53,16 @@
           <!-- Mars Facts -->
           <div class="row" id="mars-facts">
             <h4>Mars Facts</h4>
-            {{ mars.facts | safe }}
+            <!-- {{ mars.facts | safe }} -->
+            <table border="1" class="dataframe"><thead><tr style="text-align: right;">    <th></th>
+            <th>Mars</th>    <th>Earth</th>    </tr>   <tr>   <th>Description</th>    <th></th>    <th></th> </tr>
+            </thead> <tbody>   <tr>     <th>Mars - Earth Comparison</th>     <td>Mars</td>     <td>Earth</td>   </tr>
+            <tr>     <th>Diameter:</th>     <td>6,779 km</td>    <td>12,742 km</td>   </tr>   
+            <tr>     <th>Mass:</th>     <td>6.39 × 10^23 kg</td>    <td>5.97 × 10^24 kg</td> </tr>
+            <tr>     <th>Moons:</th>     <td>2</td>     <td>1</td>   </tr>   
+            <tr>     <th>Distance from Sun:</th>     <td>227,943,824 km</td>     <td>149,598,262 km</td>  </tr>  
+            <tr>     <th>Length of Year:</th>     <td>687 Earth days</td>     <td>365.24 days</td>    </tr>  <tr>     
+            <th>Temperature:</th>     <td>-87 to -5 °C</td>      <td>-88 to 58°C</td>   </tr>  </tbody></table>
           </div>
         </div>
       </div>
